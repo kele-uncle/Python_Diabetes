@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <title>登录</title>
+	<meta name="decorator" content="default"/>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		*{
+			margin: 0 auto;
+		}
+            body{
+            /*设置图片大小*/
+            background-size: 100% 100%;
+            /*背景图像将仅显示一次 no-repeat*/
+            background-repeat: no-repeat;
+            /*添加您要添加的背景图片*/
+            background-image: url('images/bg.jpg');
+            /*图片居中*/
+            margin: auto;
+        }
+		.container{
+			position: relative;
+			top: 100px;
+		}
+		.news-nav{
+			clear: both;
+			height: 80px;
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 300px;
+			margin: 0 auto;
+		}
+		.news-nav li{
+			float: left;
+			list-style-type: none;
+			margin: 0 10px;
+			font-size: 30px;
+			display: block;
+			width: 86px;
+			height: 79px;
+			text-align: center;
+			line-height: 79px;
+			font-weight: bold;
+			color: #007bff;
+			cursor: pointer;
+		}
+		.news-nav li.on{
+			color: #74dcff;
+			border-bottom-color: #74dcff;
+			border-bottom-style: solid;
+			border-bottom-width: 2px;
+		}
+		#index-news-list-2{
+			display: none;
+		}
+		.modal-dialog{
+			max-width: 100% !important;
+		}
+		.modal-content{
+			background:rgba(0,0,0,0.3);
+			width: 700px;
+		}
+		.loginForm{
+			width: 400px;
+		}
+		.loginForm .form-group{
+			margin: 30px 0;
+		}
+		.loginForm .form-group .form-control{
+			height: 40px;
+			font-size: 15px;
+		}
+		input[type="checkbox"]{
+			position:relative;
+			top:-2px;
+			vertical-align: middle;
+			cursor: pointer;
+			zoom:1.6;
+		}
+		input[type="radio"]{
+			position:relative;
+			top:-3px;
+			vertical-align: middle;
+			cursor: pointer;
+			zoom:1.6;
+		}
+		.btn-primary{
+			background-color: #3e4963;
+			border: 0px solid transparent;
+			width: 400px;
+			height: 50px;
+			font-size: 24px;
+			font-family: STKaiti;
+		}
+		label{
+			color: #fff;
+			font-size: 16px;
+		}
+       .ok {
+            color: green;
+            border: 1px solid green;
+          }
+          .error {
+        color: red;
+        border: 1px solid red;
+           }
+	</style>
+  </head>
+  <body>
+	<div class="container">
+		<div class="modal-dialog" id="login_form">
+			<div class="modal-content">
+				<div class="modal-title">
+					 <ul class="news-nav js-nav-title">
+						<li class="on" data="login">登录</li>
+						<li class="" data="register">注册</li>
+					 </ul>
+				</div>
+				<div class="modal-body index-news-list" id="index-news-list-1">
+					<form class="loginForm" id="loginForm" action="hello" method="POST">
+						{% csrf_token %}
+						  <div class="form-group">
+							  <input class="form-control required" name="name" type="text" placeholder="请输入用户名或邮箱">
+						  </div>
+						  <div class="form-group">
+							  <input class="form-control required" name="password" type="password" placeholder="请输入密码" >
+						  </div>
+						  <div class="form-group">
+							  <button class="btn btn-primary" type="submit"  >登录</button>
+						  </div>
+					 </form>
+				</div>
+
+				<div class="modal-body index-news-list" id="index-news-list-2">
+					<form class="loginForm" id="registerForm" action="register" method="post">
+						{% csrf_token %}
+						  <div class="form-group">
+							  <input class="form-control required" name="name"  id="name" type="text" placeholder="请输入要注册的用户名" onblur="check_name()">
+							  <span id="name_msg">请您输入8-20位字母、数字、下划线</span>
+						  </div>
+						  <div class="form-group">
+							  <input class="form-control required" name="password"  id="password" type="password" placeholder="请输入密码" onblur="check_psd">
+							  <span id="psd_msg">请您输入8-20位字母、数字、下划线</span>
+						  </div>
+						  <div class="form-group">
+							  <input class="form-control required" name="repassword"  type="password" placeholder="请再次输入密码">
+						  </div>
+						   <div class="form-group">
+							  <label for="remember" style="margin-left: 164px;">
+								<input type="checkbox" name="remember" id="remember" value="0"/> 记住我
+							  </label>
+						  </div>
+						  <div class="form-group">
+							  <button class="btn btn-primary" type="submit">注册</button>
+						  </div>
+					 </form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$(".js-nav-title li").click(function(){
+				$(this).attr("class","on");
+				$(this).siblings().attr("class","");
+				var index = $(".js-nav-title li").index(this);
+				$(".index-news-list").css("display","none");
+				$("#index-news-list-"+(index+1)).css("display","block");
+			});
+		});
+
+function check_name() {
+	//获取账号
+    var name = document.getElementById("name").value;
+	//校验其格式(\w字母或数字或下划线)
+    var span = document.getElementById("name_msg");
+    var reg = /^\w{6,10}$/;
+    if(reg.test(name)) {
+	//通过，增加ok样式
+	span.className = "ok";
+	 } else {
+	//不通过，增加error样式
+	span.className = "error";
+	}
+}
+function check_psd(){
+	var password =document.getElementById("password").value;
+    var span2 = document.getElementById("psd_msg");
+	var reg2 = /^\w{6,10}$/;
+	if(reg2.test(password)) {
+	span2.className = "ok";
+	} else {
+	span2.className = "error";
+	}
+}
+
+
+	</script>
+  </body>
+</html>

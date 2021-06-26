@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome</title>
+    <link rel="stylesheet" type="text/css" href="../static/style/welreigister.css">
+</head>
+<body>
+    <div class="cms_login">
+        <div class="cms_login_container flexCenter" style="min-height:390px;">
+            <div class="cms_login_image" style="min-width: 380px;">
+                <!-- <img src="./leftimg_04.png" alt=""> -->
+            </div>
+            <div class="cms_login_from" style="min-width: 380px;">
+                <form action="{% url 'Graduation_design:welreigister' %}"  method="post">
+                    {% csrf_token %}
+                    <div class="cms_login_logo">
+                    <span style="font-size:24px;">注册</span>
+                    </div>
+                    <div class="divBox">
+                    <img class="cms_login_img" src="../static/image/username_mark.png">
+                    <input class="cms_login_ipt" type="text" placeholder="用户名" name="name">
+                    </div>
+                    <div class="divBox">
+                    <img class="cms_login_img" src="../static/image/username_mark.png">
+                    <input class="cms_login_ipt" type="email" placeholder="邮箱"name="email" >
+                    </div>
+                    <div class="divBox">
+                    <img class="cms_login_img" src="../static/image/password_mark.png">
+                    <input type="password" placeholder="密码" class="cms_login_ipt"name="password" >
+                    </div>
+                    <div class="divBox">
+                    <img class="cms_login_img" src="../static/image/password_mark.png">
+                    <input type="password" placeholder="确认密码" class="cms_login_ipt" name="repassword">
+                    </div>
+                    <div class="divBox margin_top60" style="border:none;">
+                        <input class="login_btn" type="submit" value="注册" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="../static/javascript/jquery-1.12.4.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>

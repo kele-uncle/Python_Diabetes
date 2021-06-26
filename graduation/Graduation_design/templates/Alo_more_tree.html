@@ -1,0 +1,20 @@
+{% extends "Alo_base.html" %}
+
+  
+{% block content %}
+<link rel="stylesheet" href="/static/style/Alo.css">
+<body>
+<div class="demo">
+  <h1><strong>随机森林</strong></h1>
+
+  <p>随机森林是由决策树作为基学习器，随机的构建成森林且组成随机森林的决策树之间是没有任何联系的．构建好随机森林后，新的样本进入随机森林后，
+    每棵树都会根据样本做出相应的判定结果．整个随机森林的预测结果,有所有结果中的众数所决定，也就是少数服从多数</p><br>
+    <p>首先使用100棵树组成的随机森林对数据集进行分析，其中，准确度分别是：<br>训练集准确度：<br>测试集准确度：</p><br>
+    <p>同样，对数据进行可视化处理。</p><br>
+    <p><img src="{{ more_tr }}" alt="随机森林"/></p><br>
+    <p>由matplotlib画图可以得出不同特征的重要程度</p><br>
+</div>
+
+<div class="footer">This will always appear at the bottom of the page, but <strong>not fixed</strong>.</div>
+</body>
+{% endblock  %}

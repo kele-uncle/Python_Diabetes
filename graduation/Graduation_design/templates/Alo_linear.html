@@ -1,0 +1,22 @@
+{% extends "Alo_base.html" %}
+
+  
+{% block content %}
+<link rel="stylesheet" href="/static/style/Alo.css">
+<body>
+<div class="demo">
+  <h1><strong>线性回归</strong></h1>
+  <form action="{% url 'Graduation_design:linear' %}" method="post">
+    <input type="number" name="c_value" placeholder="C系数大小">
+    <input type="submit" value="查询">
+    <p>训练集精度：{{ train }}<br>测试集精度：{{ test }}</p>
+    <P><img src="{{ li_img }}"></P>
+  </form>
+
+  <p></p><br>
+  <p></p><br>
+</div>
+
+<div class="footer">This will always appear at the bottom of the page, but <strong>not fixed</strong>.</div>
+</body>
+{% endblock  %}

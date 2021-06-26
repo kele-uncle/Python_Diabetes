@@ -1,0 +1,128 @@
+* {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cms_login {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background:#666369;
+            background-size: 100% 100%;
+        }
+
+        .flexCenter {
+            text-align: center;
+            margin: auto;
+        }
+
+        .cms_login_container {
+            width: 70%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cms_login_image {
+            width: 60%;
+            height: 100%;
+        }
+
+        .cms_login_from {
+            width: 40%;
+            height: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .divBox {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            height: 46px;
+            margin-top: 20px;
+            margin-left: 10%;
+            position: relative;
+        }
+
+        .cms_login_logo {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            height: 60px;
+            /* border: 1px solid green; */
+            margin-left: 10%;
+            margin-bottom: 22px;
+            margin-top: 25px;
+        }
+
+        .cms_login_img {
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+        }
+
+        .cms_login_ipt {
+            width: 100%;
+            outline: none;
+            padding-left: 50px;
+        }
+
+        .cms_login_ipt60 {
+            width: 60%;
+            outline: none;
+            padding-left: 50px;
+        }
+
+        .cms_login_ver {
+            width: 30%;
+            outline: none;
+            margin-left: 8%;
+            border: 1px solid #c32c2c;
+            background-color: #bd7070;
+            line-height: 46px;
+            letter-spacing: 4px;
+            border-radius: 4px;
+            cursor: default;
+            color: white;
+        }
+
+        .margin_top60 {
+            margin-top: 40px;
+        }
+
+        .login_btn {
+            width: 100%;
+            height: 60px;
+            letter-spacing: 10px;
+            font-size: 24px;
+            background-color: green;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .login_btn:hover {
+            background-color: #333333;
+            border: none;
+            outline: none;
+        }

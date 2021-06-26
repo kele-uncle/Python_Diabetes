@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>算法分类</title>
+</head>
+<link rel="stylesheet" href="/static/style/Alo_base.css">
+
+
+<body>
+<header class="clearfix">
+    <div class="container">
+			<div class="header-left">
+				<h1><a href="#">Diabetes</a></h1>
+			</div>
+			<div class="header-right">
+				<label for="open">
+					<span class="hidden-desktop"></span>
+				</label>
+				<input type="checkbox" name="" id="open">
+				<nav>
+					<a href="{% url 'Graduation_design:data' %}">数据收集</a>
+					<a href="{% url 'Graduation_design:tree' %}">决策树</a>
+					<a href="{% url 'Graduation_design:more_tree' %}">随机森林</a>
+					<a href="{% url 'Graduation_design:knn' %}">KNN</a>
+					<a href="{% url 'Graduation_design:svm' %}">SVM</a>
+					<a href="{% url 'Graduation_design:linear' %}">线性回归</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+{% block content %}<div class="welcome">
+		<h1 style="text-align:center;"><strong>Hello  Welcome</strong></h1>
+	</div>
+{% endblock content %}
+</body>
+</html>

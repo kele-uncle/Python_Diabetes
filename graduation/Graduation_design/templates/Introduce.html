@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<nav id="navbar">
+	<link rel="stylesheet" href="../static/style/detail.css">
+  <header>糖尿病介绍</header>
+  <ul>
+    <li><a class="nav-link" href="#1">关于糖尿病</a></li>
+    <li>
+      <a class="nav-link" href="#2"
+        >发病原因</a
+      >
+    </li>
+    <li>
+      <a class="nav-link" href="#3">糖尿病并发症</a>
+    </li>
+    <li><a class="nav-link" href="#4">预防为主</a></li>
+    <li><a class="nav-link" href="#5">Variables</a></li>
+    <li>
+      <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+    </li>
+    <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+    <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+    <li><a class="nav-link" href="#Constants">Constants</a></li>
+    <li><a class="nav-link" href="#Data_types">Data types</a></li>
+    <li>
+      <a class="nav-link" href="#if...else_statement">if...else statement</a>
+    </li>
+    <li><a class="nav-link" href="#while_statement">while statement</a></li>
+    <li>
+      <a class="nav-link" href="#Function_declarations"
+        >Function declarations</a
+      >
+    </li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="关于糖尿病">
+    <header>关于糖尿病</header>
+    <article>
+      <p>
+        糖尿病是一类代谢性疾病其特征表现为血糖长时间高于标准值。高血糖是因为机体胰岛素分泌缺陷或某些生物功能受损，抑或两方面共同作用而导致。糖尿病在其 漫长的患病期内的长期高血压，导致人体各种组织，例如心血管、眼、肾脏、四肢、 神经功能等出现损伤、障碍甚至病变。高血糖会造成三多一少的症状：吃多、喝多、 尿多、以及体重下降。如果不进行治疗，很可能会引发许多并发症。急性并发症包 括糖尿病酮酸血症与高渗透压高血糖非酮酸性昏迷；严重的长程并发症则包括心血管疾病、中风、慢性肾脏病、糖尿病足、以及视网膜病变等。
+      </p>
+
+      <p>
+        糖尿病病例主要分为3种，I型糖尿病，II型糖尿病和妊娠糖尿病。I型糖尿病是患者自身免疫系统紊乱所导致的胰岛素分泌绝对不足，研究表明此类病例可以通过胰岛自身免疫过程中的血清学和遗传学来鉴定。而II型糖尿病更为常见，研究认为该类病例的原因是耐胰岛素作用和补偿胰岛素不足带来的反应。而在后一种原因中一定程度的高血糖可能会引起靶组织病理学和功能的变化。而且该病例没有具体的临床症状，因此导致很多患者错过最佳治疗期。妊娠糖尿病会为母亲和婴儿带来严重的健康危害,并且双方在以后生活中患II型糖尿病的风险会增加
+      </p>
+      <ul>
+        <li>
+          I型糖尿病是由自身免疫反应引起的，机体的免疫系统攻击胰腺中产生胰岛素的β细胞，致使机体无法合成其所需的胰岛素，之前也被称为胰岛素依赖型糖尿病或幼发型糖尿病。I型糖尿病患病人数占糖尿病患者总数的 5%-10%。当前对于I型糖尿病的发病机理还未有明确结论。此病在任何年龄段都有发病人群，但常发生在儿童和年轻人身上，其中一个原因是幼儿的免疫系统不完善性。β细胞的自身免疫性破坏具有多个遗传倾向，并且还关系到仍定义不清的环境因素。
+        </li>
+        <li>
+          II型糖尿病是最常见的糖尿病类型，大约占到糖尿病患者总数的 90%左右。在之前由于其症状被称为非胰岛素依赖型糖尿病，此外由于该病患者被确诊时平均年龄不低所以也被称为成人发病型糖尿病。此外还包括胰岛素抵抗和相对胰岛素不足，导致血糖升高，且至少在发病初期不需要胰岛素治疗也能生存。由于II型糖尿病的症状表征可能会经过很多年，很多患者很难意识到自身患有糖尿病。但是在这期间，血液中过量的葡萄糖能对人体造成不可逆的损害。相关报告显示许多患者直到糖尿病并发症出现时才被诊断出来患有II型糖尿病。
+        </li>
+        <li>
+        	妊娠期间出现的胰岛素抵抗或继发性高血糖糖耐量异常称为妊娠糖尿病.妊娠糖尿病多发生在妊娠的第24周左右.妊娠性糖尿病是怀孕期间最常见的一种内科并发症，世界范围内该病发病率介于 0.7~14.3%之间，也就是说全球近4%的孕妇在怀孕过程会出现妊娠性糖尿病。
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="2">
+    <header>发病原因</header>
+    <article>
+      <p>遗传因素</p>
+
+      <ul>
+        <li>
+         1型或2型糖尿病均存在明显的遗传异质性。糖尿病存在家族发病倾向，1/4～1/2患者有糖尿病家族史。临床上至少有60种以上的遗传综合征可伴有糖尿病。1型糖尿病有多个DNA位点参与发病，其中以HLA抗原基因中DQ位点多态性关系最为密切。在2型糖尿病已发现多种明确的基因突变，如胰岛素基因、胰岛素受体基因、葡萄糖激酶基因、线粒体基因等
+        </li>
+      <p>环境因素</p>
+        <li>
+          进食过多，体力活动减少导致的肥胖是2型糖尿病最主要的环境因素，使具有2型糖尿病遗传易感性的个体容易发病。1型糖尿病患者存在免疫系统异常，在某些病毒如柯萨奇病毒，风疹病毒，腮腺病毒等感染后导致自身免疫反应，破坏胰岛素β细胞。
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="3">
+    <header>糖尿病并发症</header>
+    <article>
+      <p>
+        心血管疾病是糖尿病的主要并发症，大约一半的II型糖尿病死于心血管疾病，主要为心绞痛、心肌梗塞、中风、外周动脉疾病和充血性心脏衰竭。
+      </p>
+
+      <p>
+        糖尿病眼病主要包括糖尿病引起的视网膜病变、黄斑水肿、白内障、葡萄膜炎等疾病，这类疾病导致了大量糖尿病视力损伤甚至失明。由于糖尿病眼病长期受高血糖、高血压和高血脂等因素的影响，往往意识到视力损伤时已错过最佳的治疗期。因此,临床建议进行定期筛查来减少视力损伤的可能。
+      </p>
+      <p>
+        糖尿病性神经病变是糖尿病导致的神经损伤及其相关病症。主要糖尿病患者的血糖和血压长期控制不良，导致神经病变。从而引起肌萎缩、泌尿功能障碍、神经麻痹 等多种问题，四肢尤其是足部是最常见的患病部位。这些部位的神经损伤可出现疼痛、 麻木甚至感觉丧失甚至严重的感染和溃疡、截肢。
+      </p>
+      <p>糖尿病患者由于神经和血管损伤，易导致多种足部问题。这些问题易导致感染和溃疡，增加截肢风险。糖尿病患者截肢的风险是无糖尿病人群的25倍以上
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="4">
+    <header>预防为主</header>
+    <article>
+      控制每日摄入食物的总热量,日常饮食宜低脂肪、适量蛋白质、高碳水化合物。提倡高纤维饮食、清淡饮食,坚持少量多餐,定时定量定餐;体育锻炼宜饭后进行,时间不宜长强度不宜大;包括口服药物与胰岛素,患者需掌握自我血糖监测技术,学会如何监测血糖以及监测的频度;
+    </article>
+  </section>
+  <section class="main-section" id="5">
+    <header>Variables</header>
+    <p>
+      You use variables as symbolic names for values in your application. The
+      names of variables, called identifiers, conform to certain rules.
+    </p>
+    <p>
+      A JavaScript identifier must start with a letter, underscore (_), or
+      dollar sign ($); subsequent characters can also be digits (0-9). Because
+      JavaScript is case sensitive, letters include the characters "A" through
+      "Z" (uppercase) and the characters "a" through "z" (lowercase).
+    </p>
+    <p>
+      You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers.
+      You can also use the Unicode escape sequences as characters in
+      identifiers. Some examples of legal names are Number_hits, temp99, and
+      _name.
+    </p>
+  </section>
+  <section class="main-section" id="Declaring_variables">
+    <header>Declaring variables</header>
+    <article>
+      You can declare a variable in three ways:
+      <p>
+        With the keyword var. For example, <code>var x = 42.</code> This syntax
+        can be used to declare both local and global variables.
+      </p>
+      <p>
+        By simply assigning it a value. For example, <code>x = 42.</code> This
+        always declares a global variable. It generates a strict JavaScript
+        warning. You shouldn't use this variant.
+      </p>
+      <p>
+        With the keyword let. For example,<code> let y = 13.</code> This syntax
+        can be used to declare a block scope local variable. See Variable scope
+        below.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Variable_scope">
+    <header>Variable scope</header>
+    <article>
+      <p>
+        When you declare a variable outside of any function, it is called a
+        global variable, because it is available to any other code in the
+        current document. When you declare a variable within a function, it is
+        called a local variable, because it is available only within that
+        function.
+      </p>
+
+      <p>
+        JavaScript before ECMAScript 2015 does not have block statement scope;
+        rather, a variable declared within a block is local to the function (or
+        global scope) that the block resides within. For example the following
+        code will log 5, because the scope of x is the function (or global
+        context) within which x is declared, not the block, which in this case
+        is an if statement.
+      </p>
+      <code>if (true) { var x = 5; } console.log(x); // 5</code>
+      <p>
+        This behavior changes, when using the let declaration introduced in
+        ECMAScript 2015.
+      </p>
+
+      <code
+        >if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+        defined</code
+      >
+    </article>
+  </section>
+  <section class="main-section" id="Global_variables">
+    <header>Global variables</header>
+    <article>
+      <p>
+        Global variables are in fact properties of the global object. In web
+        pages the global object is window, so you can set and access global
+        variables using the window.variable syntax.
+      </p>
+
+      <p>
+        Consequently, you can access global variables declared in one window or
+        frame from another window or frame by specifying the window or frame
+        name. For example, if a variable called phoneNumber is declared in a
+        document, you can refer to this variable from an iframe as
+        parent.phoneNumber.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Constants">
+    <header>Constants</header>
+    <article>
+      <p>
+        You can create a read-only, named constant with the const keyword. The
+        syntax of a constant identifier is the same as for a variable
+        identifier: it must start with a letter, underscore or dollar sign and
+        can contain alphabetic, numeric, or underscore characters.
+      </p>
+
+      <code>const PI = 3.14;</code>
+      <p>
+        A constant cannot change value through assignment or be re-declared
+        while the script is running. It has to be initialized to a value.
+      </p>
+
+      <p>
+        The scope rules for constants are the same as those for let block scope
+        variables. If the const keyword is omitted, the identifier is assumed to
+        represent a variable.
+      </p>
+
+      <p>
+        You cannot declare a constant with the same name as a function or
+        variable in the same scope. For example:
+      </p>
+
+      <code
+        >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+        CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+        }</code
+      >
+      However, object attributes are not protected, so the following statement
+      is executed without problems.
+      <code
+        >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code
+      >
+    </article>
+  </section>
+  <section class="main-section" id="Data_types">
+    <header>Data types</header>
+    <article>
+      <p>The latest ECMAScript standard defines seven data types:</p>
+      <ul>
+        <li>
+          <p>Six data types that are primitives:</p>
+          <ul>
+            <li>Boolean. true and false.</li>
+            <li>
+              null. A special keyword denoting a null value. Because JavaScript
+              is case-sensitive, null is not the same as Null, NULL, or any
+              other variant.
+            </li>
+            <li>undefined. A top-level property whose value is undefined.</li>
+            <li>Number. 42 or 3.14159.</li>
+            <li>String. "Howdy"</li>
+            <li>
+              Symbol (new in ECMAScript 2015). A data type whose instances are
+              unique and immutable.
+            </li>
+          </ul>
+        </li>
+
+        <li>and Object</li>
+      </ul>
+      Although these data types are a relatively small amount, they enable you
+      to perform useful functions with your applications. Objects and functions
+      are the other fundamental elements in the language. You can think of
+      objects as named containers for values, and functions as procedures that
+      your application can perform.
+    </article>
+  </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <article>
+      Use the if statement to execute a statement if a logical condition is
+      true. Use the optional else clause to execute a statement if the condition
+      is false. An if statement looks as follows:
+
+      <code>if (condition) { statement_1; } else { statement_2; }</code>
+      condition can be any expression that evaluates to true or false. See
+      Boolean for an explanation of what evaluates to true and false. If
+      condition evaluates to true, statement_1 is executed; otherwise,
+      statement_2 is executed. statement_1 and statement_2 can be any statement,
+      including further nested if statements.
+      <p>
+        You may also compound the statements using else if to have multiple
+        conditions tested in sequence, as follows:
+      </p>
+      <code
+        >if (condition_1) { statement_1; } else if (condition_2) { statement_2;
+        } else if (condition_n) { statement_n; } else { statement_last; }
+      </code>
+      In the case of multiple conditions only the first logical condition which
+      evaluates to true will be executed. To execute multiple statements, group
+      them within a block statement ({ ... }) . In general, it's good practice
+      to always use block statements, especially when nesting if statements:
+
+      <code
+        >if (condition) { statement_1_runs_if_condition_is_true;
+        statement_2_runs_if_condition_is_true; } else {
+        statement_3_runs_if_condition_is_false;
+        statement_4_runs_if_condition_is_false; }</code
+      >
+      It is advisable to not use simple assignments in a conditional expression,
+      because the assignment can be confused with equality when glancing over
+      the code. For example, do not use the following code:
+      <code>if (x = y) { /* statements here */ }</code> If you need to use an
+      assignment in a conditional expression, a common practice is to put
+      additional parentheses around the assignment. For example:
+
+      <code>if ((x = y)) { /* statements here */ }</code>
+    </article>
+  </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <article>
+      A while statement executes its statements as long as a specified condition
+      evaluates to true. A while statement looks as follows:
+
+      <code>while (condition) statement</code> If the condition becomes false,
+      statement within the loop stops executing and control passes to the
+      statement following the loop.
+
+      <p>
+        The condition test occurs before statement in the loop is executed. If
+        the condition returns true, statement is executed and the condition is
+        tested again. If the condition returns false, execution stops and
+        control is passed to the statement following while.
+      </p>
+
+      <p>
+        To execute multiple statements, use a block statement ({ ... }) to group
+        those statements.
+      </p>
+
+      Example:
+
+      <p>The following while loop iterates as long as n is less than three:</p>
+
+      <code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
+      <p>
+        With each iteration, the loop increments n and adds that value to x.
+        Therefore, x and n take on the following values:
+      </p>
+
+      <ul>
+        <li>After the first pass: n = 1 and x = 1</li>
+        <li>After the second pass: n = 2 and x = 3</li>
+        <li>After the third pass: n = 3 and x = 6</li>
+      </ul>
+      <p>
+        After completing the third pass, the condition n &lt; 3 is no longer
+        true, so the loop terminates.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Function_declarations">
+    <header>Function declarations</header>
+    <article>
+      A function definition (also called a function declaration, or function
+      statement) consists of the function keyword, followed by:
+
+      <ul>
+        <li>The name of the function.</li>
+        <li>
+          A list of arguments to the function, enclosed in parentheses and
+          separated by commas.
+        </li>
+        <li>
+          The JavaScript statements that define the function, enclosed in curly
+          brackets, { }.
+        </li>
+      </ul>
+      <p>
+        For example, the following code defines a simple function named square:
+      </p>
+
+      <code>function square(number) { return number * number; }</code>
+      <p>
+        The function square takes one argument, called number. The function
+        consists of one statement that says to return the argument of the
+        function (that is, number) multiplied by itself. The return statement
+        specifies the value returned by the function.
+      </p>
+      <code>return number * number;</code>
+      <p>
+        Primitive parameters (such as a number) are passed to functions by
+        value; the value is passed to the function, but if the function changes
+        the value of the parameter, this change is not reflected globally or in
+        the calling function.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            target="_blank"
+            >MDN</a
+          >
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+</body>
+</html>

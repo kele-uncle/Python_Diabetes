@@ -1,0 +1,102 @@
+{% extends "Alo_base.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/style/Alo.css">
+<body>
+
+
+<div class="demo">
+  <h1><strong>KNN模型</strong></h1>
+
+  <p>因为KNN算法是机器学习中最简单和应用最广泛的方法之一，所以首先使用KNN来建立模型，在这个模型中，我们要考虑三个因素，<code>K值，距离的度量，分类规则</code>我们使用欧式距离进行距离的度量，利用投票法得到最终的分类结果，所以我们只需要考虑应该如何选取Ｋ值</p>
+
+  <p>关于K值的选取，我们采用的是简单的交叉验证的方式进行实验．简单的交叉验证的思想，就是随机的划分数据，然后在各种条件下，比如改变参数的个数，改变参数的值等，用训练集训练出来模型，从这些模型中找到测试误差最小，也就是准确度最高的模型．<button>KNN模型图</button></p>
+    <br><br><br>
+
+  <p><img src="{{ KNNIMD }}" alt="KNN图"/></p>
+  <p>
+    <form action="{% url 'Graduation_design:knn' %}" method="POST">
+           {% csrf_token %}
+    <input type="text"  placeholder="输入k值预测" name="knn" value= 2>
+    <br><br><br>
+    <br><p>训练集准确度：{{ train_value }}</p><br><p>测试集准确度：{{ test_value }}</p>
+    <p>最后我们可以手动输入取值区间，查看不同值对应的精度</p>
+    <input type="text"  placeholder="起始值" name="begin"  id="begin">
+    <input type="text"  placeholder="结束值" name="end" id="end" >
+    <input type="submit" value="准确度" onclick="add()">
+    <br><br><br>
+    <div id="knn" style="width: 600px;height:400px;"></div>
+    </form>
+  </p>
+</div>
+<!--       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>-->
+<!--       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>-->
+<!--       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>-->
+<!--       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>-->
+<!--       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>-->
+<!--       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>-->
+<!--       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+
+<script>
+var begin = document.getElementById("begin");
+var  end = document.getElementById("end");
+var chartDom = document.getElementById('knn');
+var myChart = echarts.init(chartDom, 'dark');
+var data = {{ list|safe }};
+var option;
+
+option = {
+    title: {
+        text: '糖尿病分析'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['BMI', 'PRE']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: data
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name: 'BMI',
+            type: 'line',
+            stack: '总量',
+            data: [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name: 'PRE',
+            type: 'line',
+            stack: '总量',
+            data: [220, 182, 191, 234, 290, 330, 310]
+        },
+
+    ]
+};
+
+option && myChart.setOption(option);
+
+myChart.setOption(option);
+
+
+</script>
+<div class="footer"><strong>ENDING</strong>.</div>
+</body>
+{% endblock  %}

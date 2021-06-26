@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../static/style/style.css">
+</head>
+<body>
+<div class="bac">
+<form action="{% url 'Graduation_design:Doingdetail' %}" method="post" class="smart-green">
+    <h1>一起试试
+        <span>你可以输入以下信息，来尝试判断你是否有糖尿病</span>
+    </h1>
+    <label>
+        <span></span>
+        <input  type="text" name="pregVal" class="error" placeholder="怀孕次数"/>
+        <div class="error-msg"></div>
+    </label>
+        <label>
+        <span></span>
+        <input  type="text" name="plasmaVal" class="error" placeholder="血糖浓度"/>
+        <div class="error-msg"></div>
+    </label>
+        <label>
+        <span></span>
+        <input  type="text" name="bpVal" class="error" placeholder="舒张压(mm Hg)"/>
+        <div class="error-msg"></div>
+    </label>
+        <label>
+        <span></span>
+        <input  type="text" name="skinVal" class="error" placeholder="皮肤厚度"/>
+        <div class="error-msg"></div>
+    </label>
+        <label>
+        <span></span>
+        <input  type="text" name="insulinVal" class="error" placeholder="2小时血清胰岛素(mu U/ml)"/>
+        <div class="error-msg"></div>
+    </label>
+        <label>
+        <span></span>
+        <input  type="text" name="bmiVal" class="error" placeholder="体重指数(体重公斤/(身高米)^2)"/>
+        <div class="error-msg"></div>
+    </label>
+        <label>
+        <span></span>
+        <input  type="text" name="pedigreeVal" class="error" placeholder="糖尿病系谱函数"/>
+        <div class="error-msg"></div>
+    </label>
+        <label>
+        <span></span>
+        <input  type="text" name="ageVal" class="error" placeholder="今年年纪"/>
+        <div class="error-msg"></div>
+    </label>
+
+
+    <label>
+        <span>&nbsp;</span>
+        <input type="submit" class="button" value="提交"/>
+    </label>
+
+    {% csrf_token %}
+</form>
+</div>
+</body>
+</html>

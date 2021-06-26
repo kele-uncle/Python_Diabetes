@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+     {% load static %}
+    <title>Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" href="/static/style/Home.css">
+<style>
+  .hero-bg {
+  position: relative;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  background-image: url({% static '../static/images/bac.jpg' %})
+  background-position: center center;
+  padding-bottom: 40%;
+  z-index: 1;
+}
+</style>
+<body class="clear">
+  <div class="inner">
+    <header class="page-header">
+      <div class="inner flex">
+        <div class="logo-outer col12-sm col6-md col6-lg">
+          <h1 class="page-title"><a href="#">Python & Diabetes</a></h1>
+        </div>
+        <div class="nav-outer col12-sm col6-md col6-lg">
+          <nav class="top-nav">
+            <ul class="menu flex">
+              <li class="menu-item"><a href="{% url 'Graduation_design:Algorithm' %}">算法分类</a></li>
+              <li class="menu-item"><a href="{% url 'Graduation_design:Introduce' %}">糖尿病简介</a></li>
+              <li class="menu-item"><a href="{% url 'Graduation_design:formUrl' %}">与我联系</a></li>
+              <li class="menu-item"><a href="#">附近医院</a></li>
+              <li class="menu-item"><a href="{% url 'Graduation_design:login' %}">管理登录</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="inner">
+        <section class="home-section border overlay clear">
+          <div class="hero-bg" ></div>
+          <div class="overlay"></div>
+          <div class="hero-content">
+              <h2 class="hero-title center"><span class="font-light">Diabetes</span><span class="font-bold">Analysis</span></h2>
+            <p class="hero-message">Some knowledge about diabetes</p>
+            <div class="btn-wrapper">
+              <div class="col6-sm col6-md col6-lg bg-dev">
+                <a type="button" href="{% url 'Graduation_design:Searchdetail' %}" id="get-started" class="btn-cta btn-right">开始试试</a>
+              </div>
+              <div class="cta-btn-outer col6-sm col6-md col6-lg bg-dev">
+                <div>
+                  <a type="button" href="#" id="learn-more" class="btn-cta btn-left">知道更多</a>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="home-section">
+          <div class="section inner">
+            <h2 class="section-heading">Section Heading</h2>
+            <div class="col12-sm col6-md col6-lg">
+              <div class="img-outer">
+
+              </div>
+            </div>
+            <div class="section inner col12-sm col6-md col6-lg">
+              <div class="content-outer">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+</body>
+</html>

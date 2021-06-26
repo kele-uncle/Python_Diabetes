@@ -1,0 +1,19 @@
+{% extends "Alo_base.html" %}
+
+  
+{% block content %}
+<link rel="stylesheet" href="/static/style/Alo.css">
+<body>
+<div class="demo">
+  <h1><strong>决策树</strong></h1>
+
+  <p>决策树主要运用在分类问题和回归问题，分类是以树状结构表示，由根节点，叶子节点，非叶子节点，分支四部分组成，<br>非叶子节点就是一个决策点，是测试条件；分支则是测试的结果，
+    叶子节点表示的是最终的分类标记．构造决策树的基本思想就是随着树的深度的增长，节点的熵迅速降低，而熵降低的速度越低越好，这样我们就有希望能够获得一棵高度最矮的决策树．
+    熵指的是物体内部的混乱程度．算出每种情况出现的比例与该种情况的乘积，后将所有情况的乘积加和，得到信息熵．如果熵值变小，说明当前的分类效果要比上</p><br>
+    <p>对特征重要性进行数据可视化处理：<img src="{{ tree_img }}" alt="决策图"/> </p></p><br>
+    <p>直观的看出，Glucose（葡萄糖）是目前最重要的特征。BMI（身体质量指数）为第二重要的信息特征</p><br>
+</div>
+
+<div class="footer">This will always appear at the bottom of the page, but <strong>not fixed</strong>.</div>
+</body>
+{% endblock  %}

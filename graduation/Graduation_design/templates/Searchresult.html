@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../static/style/style.css">
+</head>
+<body>
+<div class="bac">
+<center>
+    {% if scoreval == 1 %}
+    <h1 class="small" style="color:#ff470f">oh!根据计算结果,可能已经患有糖尿病了</h1>
+      {% else %}
+      <h1 class="small" style="color:#23efe6">恭喜！根据计算结果，没有患有糖尿病的趋势</h1>
+    <P>算法集成了一个机器学习模型，可以帮助预测一个人是否患有糖尿病，从刚才的表单中，将用户的各种健康状况作为输入，并根据所提供的信息预测结果。建立模型，最后选择参数最优的随机森林分类器。它提供了90.9%的准确性。数据来自UCI机器学习上传的Kaggle</P>
+      {% endif %}
+</center>
+
+    <div class="button_cont" align="center"><a class="example_e" href="{% url 'Graduation_design:Searchdetail' %}" rel="nofollow noopener">Back to Home</a></div>
+
+</div>
+</body>
+</html>

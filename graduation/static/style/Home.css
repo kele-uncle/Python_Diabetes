@@ -1,0 +1,337 @@
+.col1-lg {
+    width: 8.33333333%;
+  }
+.col2-lg {
+    width: 16.66666666%;
+}
+.col3-lg {
+    width: 25%;
+}
+.col4-lg {
+    width: 33.33333333%;
+}
+.col5-lg {
+    width: 41.66666666%;
+}
+.col6-lg {
+    width: 50%;
+}
+.col7-lg {
+    width: 58.33333333%;
+}
+.col8-lg {
+    width: 66.66666666%;
+}
+.col9-lg {
+    width: 75%;
+}
+.col10-lg {
+    width: 83.33333333%;
+}
+.col11-lg {
+    width: 91.6666666%;
+}
+.col12-lg {
+    width: 100%;
+}
+
+.col1-md {
+    width: 8.33333333%;
+}
+.col2-md {
+    width: 16.66666666%;
+}
+.col3-md {
+    width: 25%;
+}
+.col4-md {
+    width: 33.33333333%;
+}
+.col5-md {
+    width: 41.66666666%;
+}
+.col6-md {
+    width: 50%;
+}
+.col7-md {
+    width: 58.33333333%;
+}
+.col8-md {
+    width: 66.66666666%;
+}
+.col9-md {
+    width: 75%;
+}
+.col10-md {
+    width: 83.33333333%;
+}
+.col11-md {
+    width: 91.6666666%;
+}
+.col12-md {
+    width: 100%;
+}
+
+.col1-sm {
+    width: 8.33333333%;
+}
+.col2-sm {
+    width: 16.66666666%;
+}
+.col3-sm {
+    width: 25%;
+}
+.col4-sm {
+    width: 33.33333333%;
+}
+.col5-sm {
+    width: 41.66666666%;
+}
+.col6-sm {
+    width: 50%;
+}
+.col7-sm {
+    width: 58.33333333%;
+}
+.col8-sm {
+    width: 66.66666666%;
+}
+.col9-sm {
+    width: 75%;
+}
+.col10-sm {
+    width: 83.33333333%;
+}
+.col11-sm {
+    width: 91.6666666%;
+}
+.col12-sm {
+    width: 100%;
+}
+
+body {
+  font-family: "Aktiv Grotesk", "Open Sans", "Arial", sans-serif;
+  color: #555555;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.inner {
+
+  padding: 0;
+  margin: 0 auto;
+  clear: both;
+}
+
+.flex {
+    display: flex;
+}
+.rel-position {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left:0;
+}
+
+.float-left {
+    float: left;
+}
+
+.page-header {
+  background-color: #ffffff;
+  border: 1px solid #444;
+}
+.page-header .inner {
+  padding: 1.3em 1.5em;
+
+}
+
+
+.page-header a {
+  text-decoration: none;
+}
+
+.page-header h1 a {
+  color: #555555;
+}
+.page-header h1 a:hover {
+  color: #4552CC;
+}
+
+.logo-outer,
+.nav-outer {
+  vertical-align: middle;
+  padding: 1.3em 1.25em;
+  margin: 0;
+}
+
+.logo-outer h1{
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1.page-title {
+  vertical-align: middle;
+  clear: both;
+}
+
+.top-nav {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav ul li {
+    display: inline-block;
+}
+
+.top-nav ul li a,
+.logo h1 a {
+  color: #555555;
+  font-weight: 500;
+  padding: .5em 1.5em;
+}
+
+.top-nav ul li a:active,
+.top-nav ul li a:hover
+{
+    color: #4552CC;
+    padding: .5em 1.5em;
+    text-decoration: none;
+}
+
+.logo a:hover,
+.logo a:hover h1{
+    text-decoration: none;
+    opacity: .8;
+}
+
+.main-content {
+  position: relative;
+  top: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.border {
+  border: 1px solid #666;
+}
+.section.inner {
+
+}
+.hero-bg {
+  position: relative;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  background:url(https://pic3.zhimg.com/80/v2-518be1c52658006bed376f22adef5276_720w.jpg)
+  background-position: center center;
+  padding-bottom: 40%;
+  z-index: 1;
+}
+.overlay {
+ position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+}
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  left: 25%;
+  z-index: 3;
+  vertical-align: middle;
+}
+
+.hero-title {
+  font-size: 500%;
+  line-height: 0;
+  padding-top: 3em;
+  color: #f5f5f5;
+}
+
+.hero-title>.font-light {
+  font-weight: 300;
+}
+
+ .hero-title>.font-bold {
+  font-weight: 600;
+}
+
+.hero-message {
+  font-size: 2em;
+  text-align: center;
+  color: #f5f5f5;
+  opacity: .9;
+}
+
+.btn-wrapper {
+  display: flex;
+}
+
+.btn-cta {
+  font-size: 1em;
+  padding: 1em 1.3em .8em;
+  border-radius: 7px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.btn-right {
+  float: right;
+  margin-right: 7.5px;
+}
+.btn-left {
+  float: left;
+  margin-left: 7.5px;
+}
+
+#learn-more {
+  color: #ffffff;
+  background-color: #1546E8;
+  transition: ease-in-out .3s;
+  border: 1px solid #1546E8;
+}
+#learn-more:hover {
+  color: #1546e8;
+  background-color: #ffffff;
+}
+
+#get-started {
+  color: #ffffff;
+  background-color: #EB5300;
+  transition: ease-in-out .3s;
+  border: 1px solid #EB5300;
+}
+#get-started:hover {
+  color: #EB5300;
+  background-color: #ffffff;
+}

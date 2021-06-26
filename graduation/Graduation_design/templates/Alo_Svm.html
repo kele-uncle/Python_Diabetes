@@ -1,0 +1,21 @@
+{% extends "Alo_base.html" %}
+
+  
+{% block content %}
+<link rel="stylesheet" href="/static/style/Alo.css">
+<body>
+<div class="demo">
+  <h1><strong>向量机预测</strong></h1>
+
+  <p>svm的最重要的两个参数，一个是惩罚因子Ｃ，惩罚因子Ｃ的作用是通过改变大小，来控制svm分类标准的严格程度．当Ｃ趋于无限大时，意味着分类严格不能有偏差；当Ｃ趋近很小时，
+    意味着可以有很大的错误容忍．在这里,我们分别设置惩罚因子和核函数分别不变的情况下来对预测的精度进行探索</p><br>
+
+  <p>分别在c不变和核函数的值不变的情况下，得到的值分别为：</p><br>
+  <p></p><br>
+  <p>从表中可以看到起初时，测试集的精度略高于训练集，说明模型实际上还处于一个欠拟合的状态，需要进一步地增大C和gamma的值，即增大模型的复杂度，当增大到一定的程度时，
+    又看到训练集的精度开始高于测试集，则开始趋向过拟合状态，因此将本次与上次的参数设定进行折中处理，最后选定的C为55，gamma的值为1</p><br>
+</div><br>
+
+<div class="footer">This will always appear at the bottom of the page, but <strong>not fixed</strong>.</div>
+</body>
+{% endblock  %}
